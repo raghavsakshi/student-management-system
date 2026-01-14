@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sms-backend
+    env: node
+    region: singapore # Optional: You can remove this to let Render choose
+    plan: free
+    rootCommand: cd sms-backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+    autoDeploy: false
