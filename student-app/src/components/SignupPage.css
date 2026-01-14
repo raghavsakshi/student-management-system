@@ -1,0 +1,138 @@
+/* Reset/Base for the page */
+.signup-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    font-family: 'Inter', sans-serif;
+}
+
+.signup-header-section {
+    background: var(--gradient-primary);
+    /* Use gradient from theme */
+    height: 35vh;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.signup-welcome-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    /* White text on gradient */
+}
+
+.signup-form-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+    /* Slight overlap or pull up */
+}
+
+.signup-form-styled {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.styled-input-group {
+    position: relative;
+    width: 100%;
+}
+
+.styled-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    /* Theme border color */
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    /* Dark input bg */
+    transition: all 0.3s ease;
+}
+
+.styled-input::placeholder {
+    color: var(--text-muted);
+}
+
+.styled-input:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--primary-purple);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-styled-signup {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    /* Pill shape */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-styled-signup:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-styled-signup:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.signup-sub-footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.link-login-styled {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.error-message {
+    color: #ef4444;
+    /* Standard danger color */
+    font-size: 0.8rem;
+    margin-left: 4px;
+    margin-top: -10px;
+    display: block;
+}
+
+.error-message.centered {
+    text-align: center;
+    margin-top: 10px;
+}

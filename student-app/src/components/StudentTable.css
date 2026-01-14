@@ -1,0 +1,193 @@
+.table-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.student-table thead {
+    background: var(--bg-tertiary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.student-table th {
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.student-table td {
+    padding: var(--spacing-lg) var(--spacing-md);
+    border-bottom: 1px solid var(--divider-color);
+    color: var(--text-primary);
+}
+
+.table-row {
+    transition: all var(--transition-fast);
+}
+
+.table-row:hover {
+    background: var(--bg-tertiary);
+}
+
+.student-id {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-family: 'Courier New', monospace;
+}
+
+.student-name-cell {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.student-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.student-name {
+    font-weight: 500;
+}
+
+.student-email {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.student-course {
+    font-weight: 500;
+}
+
+.grade-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(167, 139, 250, 0.2) 100%);
+    color: var(--accent-purple);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.badge-active {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge-inactive {
+    background: rgba(107, 114, 128, 0.2);
+    color: #9ca3af;
+    border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+.badge-pending {
+    background: rgba(234, 179, 8, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.action-buttons {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.btn-icon {
+    padding: var(--spacing-xs);
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.btn-view:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: var(--accent-purple);
+    transform: translateY(-2px);
+}
+
+.btn-edit:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.btn-delete:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+    transform: translateY(-2px);
+}
+
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-2xl) !important;
+    color: var(--text-muted);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .student-table th,
+    .student-table td {
+        padding: var(--spacing-sm);
+        font-size: 0.85rem;
+    }
+
+    .student-avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .student-email {
+        display: none;
+    }
+
+    .btn-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+}

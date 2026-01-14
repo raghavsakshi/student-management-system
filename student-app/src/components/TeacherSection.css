@@ -1,0 +1,310 @@
+.teacher-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.teacher-header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+}
+
+.teacher-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.teacher-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.class-selector-top {
+    background: var(--bg-card);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.class-selector-top label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.class-select-dropdown {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    background: var(--bg-main);
+    color: var(--text-primary);
+    font-weight: 600;
+    outline: none;
+}
+
+/* Tabs */
+.teacher-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--bg-card);
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    width: fit-content;
+}
+
+.tab-btn {
+    padding: 0.6rem 1.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Grid & Cards */
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.teacher-card {
+    background: var(--bg-card);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.full-width-card {
+    grid-column: 1 / -1;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Tables */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.teacher-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.teacher-table th {
+    padding: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.teacher-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.student-name-main {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.grade-pill {
+    background: rgba(124, 58, 237, 0.1);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+.status-pill {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-pill.active {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+.status-pill.inactive {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.attendance-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.attendance-badge.present {
+    background: #22c55e;
+    color: white;
+}
+
+.attendance-badge.absent {
+    background: #ef4444;
+    color: white;
+}
+
+/* Progress Bars */
+.progress-bar-bg {
+    height: 8px;
+    background: var(--bg-main);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn-sm {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* Toggle buttons for attendance */
+.toggle-group {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.toggle-btn {
+    padding: 0.3rem 0.75rem;
+    border: none;
+    background: var(--bg-main);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.toggle-btn.present-toggle.active {
+    background: #22c55e;
+    color: white;
+}
+
+.toggle-btn.absent-toggle.active {
+    background: #ef4444;
+    color: white;
+}
+
+/* Class List in Overview */
+.class-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.class-item {
+    padding: 1rem;
+    background: var(--bg-main);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.class-item:hover {
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.class-item.active {
+    background: rgba(124, 58, 237, 0.05);
+    border-color: var(--primary-color);
+}
+
+.class-name {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.class-meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+    .teacher-header-main {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .teacher-tabs {
+        width: 100%;
+        overflow-x: auto;
+    }
+}

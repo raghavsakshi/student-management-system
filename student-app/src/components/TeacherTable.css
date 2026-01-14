@@ -1,0 +1,6 @@
+/* Reusing styles from StudentTable.css via index.css or common naming */
+/* Specific overrides if needed */
+
+.teacher-table-container {
+    margin-top: 1rem;
+}

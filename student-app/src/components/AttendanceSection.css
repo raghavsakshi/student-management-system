@@ -1,0 +1,257 @@
+.attendance-container {
+    padding: 1.5rem;
+}
+
+.attendance-header {
+    margin-bottom: 2rem;
+}
+
+.attendance-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.attendance-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.attendance-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab-btn:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    background: var(--bg-card);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.attendance-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance-table thead {
+    background: var(--bg-secondary);
+}
+
+.attendance-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.attendance-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.attendance-table tbody tr:hover {
+    background: var(--bg-hover);
+}
+
+.status-toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.status-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.status-btn:hover {
+    border-color: var(--primary-color);
+}
+
+.status-btn.active.present {
+    background: #22c55e;
+    color: white;
+    border-color: #22c55e;
+}
+
+.status-btn.active.late {
+    background: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
+}
+
+.status-btn.active.absent {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-badge.present {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.late {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-badge.absent {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-badge.not.marked {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+.attendance-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-card {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border-left: 4px solid var(--primary-color);
+}
+
+.summary-card.present {
+    border-left-color: #22c55e;
+}
+
+.summary-card.absent {
+    border-left-color: #ef4444;
+}
+
+.summary-card.late {
+    border-left-color: #f59e0b;
+}
+
+.summary-card.percentage {
+    border-left-color: var(--primary-color);
+}
+
+.summary-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.summary-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.percentage-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.percentage-badge.good {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.percentage-badge.warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.percentage-badge.poor {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.text-center {
+    text-align: center;
+}
